@@ -23,7 +23,7 @@ public class LCDScreen {
 	
 	/*Size of digits to be printed*/
 	private Integer size;
-	
+	private Integer space;
 	/* 2D Array to store the structure of the digits to be printed*/
 	private String[][] matrixPrint;	
 	
@@ -35,10 +35,13 @@ public class LCDScreen {
 	 * @param _number Number to be printed
 	 * @param _size Print size
 	 */
-	public void printNumber(String _number, int _size) {
+	public void printNumber(String _number, int _size, int _space) {
 		
 		//Set the size
 		this.size = _size;
+		
+		//Set the space between digits
+		this.space = _space;
 		
 		//Set the number of rows of each digit
 		this.numRows = (2 * size) + 3;
@@ -105,7 +108,7 @@ public class LCDScreen {
 	private void createMatrix(Integer [] _digits) {
 		
 		//Calculate the total number of columns
-		totalCols = (numCols * totalDigits) + (totalDigits - 1);
+		totalCols = (numCols * totalDigits) + ((totalDigits * space) - space);
 		
 		/*Create and initialize the matrix with blank spaces*/
 		matrixPrint = new String[numRows][totalCols];		
@@ -242,7 +245,7 @@ public class LCDScreen {
 		Integer [] initialPos = new Integer [2];
 		
 		//start column of the segment depending on the index
-		int colStart = _index * (numCols + 1);
+		int colStart = _index * (numCols + space);
 		
 		/*Calculate the start point depending on the segment*/
 		switch(_segment) {

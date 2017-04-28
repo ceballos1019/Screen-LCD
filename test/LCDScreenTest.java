@@ -19,7 +19,7 @@ public class LCDScreenTest {
 	public void testPrintNumber() {
 		LCDScreen lcd = new LCDScreen();
 		try {
-		lcd.printNumber("123456789054336143", 3);
+		lcd.printNumber("1234567890", 3, 5);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
