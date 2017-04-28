@@ -7,20 +7,6 @@ Salida: Imprimir los números especificados usando el caracter “-“ para los 
 
 Entre cada impresión debe haber una línea blanca.
 
-Ejemplo: Entrada: 2,2345 3,67890 0,0
+Proyecto desarrollado en Java
 
-
-   _ _  _ _        _ _
-|     |    | |  | |
-|  _ _| _ _| |__| |_ _
-| |        |    |     |
-| |_ _  _ _|    |  _ _|
-
- _ _ _  _ _ _   _ _ _   _ _ _   _ _ _ 
-|            | |     | |     | |     |
-|            | |     | |     | |     |
-|_ _ _       | |_ _ _| |_ _ _| |     |
-|     |      | |     |       | |     |
-|     |      | |     |       | |     |
-|_ _ _|      | |_ _ _|  _ _ _| |_ _ _|
-
+Eclipse
