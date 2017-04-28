@@ -1,3 +1,4 @@
+package co.edu.udea.screenlcd.logic;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,11 +7,13 @@ import java.util.List;
  */
 
 /**
+ * Class where it is defined the logic to print a number in LCD Screen format
+ * Implementation of {@link Screen}
  * @author Andres Ceballos Sánchez - andres.ceballoss@udea.edu.co
  * @version 1.0
  *
  */
-public class LCDScreen {
+public class LCDScreen implements Screen {
 	
 	/*Constants*/
 	public static final String HORIZONTAL_BAR = "-";
@@ -35,6 +38,7 @@ public class LCDScreen {
 	 * @param _number Number to be printed
 	 * @param _size Print size
 	 */
+	@Override
 	public void printNumber(String _number, int _size, int _space) {
 		
 		//Set the size

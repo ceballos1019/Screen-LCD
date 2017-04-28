@@ -1,9 +1,11 @@
+package co.edu.udea.screenlcd.util;
 
 /**
  * 
  */
 
 /**
+ * Class to do some validations on the input
  * @author Andres Ceballos Sánchez - andres.ceballoss@udea.edu.co
  * @version 1.0
  *
@@ -39,7 +41,7 @@ public class CustomValidator {
 		
 		/*Validate if the entry contains the separator symbol*/
 		if(!entry.contains(",")) {
-			throw new IllegalArgumentException("La entrada " + entry + "no posee el caracter separador "
+			throw new IllegalArgumentException("La entrada " + entry + " no posee el caracter separador "
 					+ SEPARATOR_SYMBOL);
 		}
 		
@@ -48,12 +50,12 @@ public class CustomValidator {
 		
 		/*Check the number of parameters*/
 		if(parameters.length > 2) {
-			throw new IllegalArgumentException("La entrada " + entry + "posee más de un caracter separador "
+			throw new IllegalArgumentException("La entrada " + entry + " posee más de un caracter separador "
 					+ SEPARATOR_SYMBOL);
 		}
 		
 		if(parameters.length < 2) {
-			throw new IllegalArgumentException("La entrada " + entry + "no posee el formato requerido");
+			throw new IllegalArgumentException("La entrada " + entry + " no posee el formato requerido");
 		}
 		
 		
@@ -63,16 +65,16 @@ public class CustomValidator {
 			
 			if(numParameters[0] < 0 || numParameters[0] > 10) {
 				throw new IllegalArgumentException("El parametro size [" + numParameters[0] +
-						"debe estar entre 1 y 10");
+						"] debe estar entre 1 y 10");
 			}
 		} else {
-			throw new IllegalArgumentException("El parametro size [" + numParameters[0] +
-					"no es un número");
+			throw new IllegalArgumentException("El parametro size [" + parameters[0] +
+					"] no es un número");
 		}
 		
 		if(!isNumeric(parameters[1])) {
-			throw new IllegalArgumentException("El parametro numero[" + numParameters[1] + 
-					"no es un número");
+			throw new IllegalArgumentException("El parametro numero[" + parameters[1] + 
+					"] no es un número");
 		}
 		
 	}

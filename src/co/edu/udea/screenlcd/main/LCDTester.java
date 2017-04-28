@@ -1,7 +1,11 @@
+package co.edu.udea.screenlcd.main;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
+
+import co.edu.udea.screenlcd.logic.LCDScreen;
+import co.edu.udea.screenlcd.util.CustomValidator;
 
 /**
  * 
@@ -68,7 +72,7 @@ public class LCDTester {
 				String [] params = currentEntry.split(CustomValidator.SEPARATOR_SYMBOL);				
 				int sizeDigits = Integer.parseInt(params[0]);
 				screenLCD.printNumber(params[1], sizeDigits, spaceDigits);	
-				System.out.println();
+				System.out.println(); //Space line
 			}				
 			
 		} catch(Exception ex) {
