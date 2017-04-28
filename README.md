@@ -9,4 +9,4 @@ Entre cada impresión debe haber una línea blanca.
 
 Proyecto desarrollado en Java
 
-Eclipse
+Eclipse IDE
