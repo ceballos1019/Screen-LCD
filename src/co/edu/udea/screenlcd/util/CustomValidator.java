@@ -63,7 +63,7 @@ public class CustomValidator {
 		if(isNumeric(parameters[0])) {
 			numParameters[0] = Integer.parseInt(parameters[0]);
 			
-			if(numParameters[0] < 0 || numParameters[0] > 10) {
+			if(numParameters[0] < 1 || numParameters[0] > 10) {
 				throw new IllegalArgumentException("El parametro size [" + numParameters[0] +
 						"] debe estar entre 1 y 10");
 			}
